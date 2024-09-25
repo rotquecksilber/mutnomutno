@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+  mongodb:
+    image: mongo
+    ports:
+      - '27017:27017'
+    networks:
+      - backend-network
+    volumes:
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+    restart: unless-stopped
+
+  backend:
+    build: .
+    ports:
+      - '4000:3001'
+    environment:
+      - MONGODB_URI
+      - TELEGRAM_BOT_TOKEN
+      - TELEGRAM_BOT_TOKEN_MESSAGES
+      - TELEGRAM_CHAT_ID_MESSAGES
+      - TELEGRAM_CHAT_ID
+      - JWT_SECRET
+    networks:
+      - backend-network
+    restart: unless-stopped
+
+networks:
+  backend-network:
+    driver: bridge
