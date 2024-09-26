@@ -1,0 +1,29 @@
+:root {
+  max-width: 100vw;
+
+  --background-color: #A5A6Ac;
+  --text-color: #1c1c1c;
+  --link-color: #d5d5d5;
+  --link-hoover: #5d001e;
+  --white: #fff;
+
+  --header-color: #000000;
+
+  --swiper-pagination-color: #3b0415; /* Цвет активных точек пагинации (например, красный) */
+  --swiper-pagination-bullet-inactive-opacity: 0.5; /* Прозрачность неактивных точек */
+  --swiper-navigation-color: #3b0415;
+}
+
+html,
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}

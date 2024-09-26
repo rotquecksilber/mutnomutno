@@ -1,0 +1,32 @@
+.admin_products {
+
+    margin: 40px 5vw;
+}
+
+.admin_products_title {
+    margin-bottom: 20px;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 600;
+    text-align: center;
+}
+
+.admin_products_system {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+}
+.new_product_button {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    color: white;
+    background: #1c1c1c;
+    border: 1px solid var(--link-hoover);
+    border-radius: 5px;
+}
+
+.new_product_button:hover {
+    background: var(--link-hoover);
+}

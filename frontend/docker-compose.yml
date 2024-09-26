@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - /etc/letsencrypt:/etc/letsencrypt
+    depends_on:
+      - frontend
+    networks:
+      - backend-network
+
+  frontend:
+    build: .
+    ports:
+      - '80:3000'
+    restart: always
+    environment:
+      - NEXT_PUBLIC_API_URL
+      - NEXT_PUBLIC_SITE_URL
+      - NEXT_PUBLIC_API_URL_LINUX
+    networks:
+      - backend-network
+
+networks:
+  backend-network:
+    driver: bridge

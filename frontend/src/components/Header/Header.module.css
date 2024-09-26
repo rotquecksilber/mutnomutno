@@ -1,0 +1,43 @@
+.header {
+    background: var(--header-color);
+}
+
+.header_wrapper {
+    padding: 10px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.header_menu {
+    cursor: pointer;
+}
+
+.header_menu__button {
+
+    all: unset;
+}
+
+.header_link {
+    text-decoration: none;
+}
+
+.header_link,
+.header_menu__button {
+    color: var(--link-color);
+    margin: 0 10px;
+    font-weight: 700;
+    font-size: clamp(12px, 2vw, 20px);
+}
+
+.header_menu__button:hover,
+.header_link:hover {
+    color: var(--link-hoover);
+}
+
+@media (max-width: 490px) {
+    .header_menu {
+        display: none;
+    }
+}

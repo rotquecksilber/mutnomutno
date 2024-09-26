@@ -2,13 +2,13 @@ version: '3.3'
 
 services:
   mongodb:
-    image: mongo
+    image: mongo:latest
     ports:
       - '27017:27017'
     networks:
       - backend-network
     volumes:
-      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js
+      - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
     restart: unless-stopped
 
   backend:

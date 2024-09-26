@@ -1,0 +1,114 @@
+
+.buy {
+    padding: 0 20px 5vw;
+    margin: 0 auto;
+    gap: 20px;
+    max-width: 1200px;
+}
+
+.stores_wrapper {
+    width: fit-content;
+    margin-bottom: 40px;
+}
+
+.stores_title {
+    margin: 40px 0;
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 600;
+    text-align: center;
+}
+
+.stores_name {
+
+    font-size: clamp(18px, 2vw, 26px);
+    margin: 10px 10px 5px 0;
+}
+
+.stores_link {
+
+    color: var(--text-color);
+}
+
+.stores_link:hover {
+    color: var(--link-hoover);
+}
+.contact_form {
+    margin-top: 20px;
+}
+
+.form_group {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.form_label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: clamp(14px, 1.5vw, 26px);
+}
+
+.form_input,
+.form_textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: clamp(14px, 1.5vw, 26px);
+}
+
+.form_button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    color: #fff;
+    border: none;
+
+    cursor: pointer;
+}
+
+.form_button:hover {
+    background-color: var(--link-hoover);
+}
+
+
+/* Custom styles for the required inputs */
+.form_input:invalid,
+.form_textarea:invalid {
+    border: 2px solid var(--link-hoover);
+}
+
+.form_input:focus:invalid,
+.form_textarea:focus:invalid {
+    outline: none; /* Remove default outline */
+}
+
+/* Optional: Fancy focused styles for valid fields */
+.form_input:valid,
+.form_textarea:valid {
+    border: 2px solid #000000;
+}
+
+.form_input:focus,
+.form_textarea:focus {
+    outline: none; /* Remove default outline */
+}
+
+/* Styling for the error messages */
+.error_message {
+    color: var(--link-hoover);
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.form_input:invalid + .error-message,
+.form_textarea:invalid + .error-message {
+    display: block;
+}
+
+.success_message {
+    font-size: clamp(18px, 2vw, 26px);
+    color: var(--link-hoover);
+    margin-top: 10px;
+}

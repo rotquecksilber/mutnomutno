@@ -1,0 +1,25 @@
+.product_title {
+    font-size: clamp(14px, 2vw, 26px);
+    margin: 10px 10px 5px 0;
+}
+
+.product_price {
+    font-size: clamp(12px, 1.8vw, 24px);
+}
+
+.product_card {
+
+    border-radius: 10px;
+    border: 2px solid var(--link-hoover);
+    background: var(--white);
+    width: fit-content;
+    padding: 10px;
+}
+.product_link{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.product_card:hover {
+    box-shadow: 0 0 15px var(--link-hoover);
+}

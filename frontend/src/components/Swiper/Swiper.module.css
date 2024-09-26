@@ -1,0 +1,56 @@
+/* Swiper.module.css */
+
+.carousel {
+    width:450px;
+    max-width: 1000px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+
+.carousel__imageContainer {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.carousel__imageContainer img {
+    object-fit: contain;
+}
+
+.thumbsSwiper {
+    margin-top: 10px;
+}
+
+.carousel__thumbContainer {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.carousel__thumbContainer img {
+    object-fit: cover;
+}
+
+@media (max-width: 500px) {
+    .carousel {
+        width:350px;
+    }
+
+    .carousel__imageContainer {
+        height: 350px;
+    }
+
+    .carousel__thumbContainer {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 490px) {
+    .carousel {
+    margin-top: 20px;
+    }
+}

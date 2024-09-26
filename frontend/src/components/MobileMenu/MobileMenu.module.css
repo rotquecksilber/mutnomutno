@@ -1,0 +1,58 @@
+
+.burger_menu {
+all: unset;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 15px;
+    height: 10px;
+    cursor: pointer;
+}
+
+.line {
+    width: 30px;
+    height: 2px;
+    margin-bottom: 4px;
+    background-color: var(--link-color);
+    border-radius: 2px;
+}
+
+.header_menu__open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    background: var(--header-color);
+    padding: 10px;
+}
+
+.header_link {
+    text-decoration: none;
+    color: var(--link-color);
+    margin: 0 10px 5px;
+    font-weight: 700;
+    font-size: clamp(12px, 2vw, 20px);
+}
+
+.header_link:hover {
+    color: var(--link-hoover);
+}
+
+/* Медиа-запросы */
+@media (min-width: 490px) {
+    .burger_menu {
+        display: none;
+    }
+
+    .mobileMenuContainer {
+        display: none;
+    }
+
+    .header_menu__open {
+        display: none;
+    }
+
+}
