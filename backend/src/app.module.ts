@@ -10,6 +10,9 @@ import { UsersModule } from './users/users.module';
 import { AuthModule } from './auth/auth.module';
 import { AuthController } from './auth/auth.controller';
 import { ProductModule } from './products/product.module';
+import { NotificationModule } from './notification/notification.module';
+import { ContactsModule } from './contacts/contacts.module';
+import { StoresModule } from './stores/stores.module';
 
 @Module({
   imports: [
@@ -28,6 +31,9 @@ import { ProductModule } from './products/product.module';
     UsersModule,
     AuthModule,
     ProductModule,
+    NotificationModule,
+    ContactsModule,
+    StoresModule,
   ],
   controllers: [AppController, AuthController],
   providers: [AppService],

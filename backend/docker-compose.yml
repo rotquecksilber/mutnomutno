@@ -8,7 +8,9 @@ services:
     networks:
       - backend-network
     volumes:
+      - ./mongod.conf:/etc/mongod.conf
       - ./mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    command: mongod --config /etc/mongod.conf
     restart: unless-stopped
 
   backend:
